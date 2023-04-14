@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    position: fixed;
+    height: 79px;
+    width: 100%;
+    /* background-color: rgb(243, 234, 234); */
+    z-index: 100;
+    padding: 0 20px;
+}
+
+.nav {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nav,
+.nav_item {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navlogo {
+    font-size: 40px;
+}
+
+.nav_item {
+    column-gap: 40px;
+}
+
+.nav_link:hover {
+    color: plum;
+}
+
+.nav_link,
+.navlogo,
+.btn {
+    color: white;
+    text-shadow: 2px 4px 4px;
+}
+
+.btn {
+    padding: 6px 24px;
+    border: 2px solid white;
+    background: transparent;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(0.99);
+}
+
+.home {
+    position: realtive;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(171, 166, 240);
+    background-image:
+        url("https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-position: center;
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-out;
+}
+
+.home.show::before {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.form-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 320px;
+    width: 100%;
+    transform: translate(-50%, -50%) scale(1.2);
+    z-index: 101;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease-out;
+}
+
+.home.show .form-container {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.signup_form {
+    display: none;
+}
+
+.form-container.active .signup_form {
+    display: block;
+}
+
+.form-container.active .login_form {
+    display: none;
+}
+
+.form_close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: black;
+    font-size: 22px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.form-container h1 {
+    font-size: 25px;
+    color:  rgb(171, 166, 240);
+    text-align: center;
+}
+
+.input_box {
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    height: 40px;
+}
+
+.input_box input {
+    height: 100%;
+    width: 100%;
+    padding: 0 30px;
+    border: none;
+    outline: none;
+    color: #333;
+    transition: all 0.2s ease;
+    border-bottom: 1.5px solid grey;
+}
+
+.input_box input:focus {
+    border-color:  rgb(171, 166, 240);
+}
+
+.input_box i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.input_box i.email,
+.input_box i.password {
+    left: 0;
+    /* color: #707070; */
+}
+
+.input_box input:focus~i.email,
+.input_box input:focus~i.password {
+    color:  rgb(171, 166, 240);
+}
+
+.option_field {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-container a {
+    color: rgb(171, 166, 240);
+    font-size: 14px;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}
+
+.checkbox {
+    display: flex;
+    white-space: nowrap;
+    column-gap: 8px;
+}
+
+.checkbox input {
+    accent-color: rgb(171, 166, 240);
+}
+
+.checkbox label {
+    font-size: 14px;
+    cursor: pointer;
+    user-select: none;
+    color: #0b0217;
+}
+
+.form-container .btn {
+    background:  rgb(171, 166, 240);
+    margin-top: 30px;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 10px;
+}
+
+.login_signup {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 15px;
+}

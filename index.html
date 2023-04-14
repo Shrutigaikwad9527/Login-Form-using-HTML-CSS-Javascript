@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log in or Sing up Form</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/466855174f.js"
+crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="header">
+<nav class="nav">
+<a href="#" class="navlogo">InternCrowd</a>
+<ul class="nav_items">
+<li class="nav_item">
+<a href="#" class="nav_link">Home</a>
+<a href="#" class="nav_link">About</a>
+<a href="#" class="nav_link">Service</a>
+<a href="#" class="nav_link">Contact</a>
+</li>
+</ul>
+<button class="btn" id="form_open">Login</button>
+</nav>
+</header>
+<section class="home">
+<div class="form-container">
+<i class="fa-solid fa-xmark form_close"></i>
+<div class="form login_form">
+<form action="">
+<h1>Login</h1>
+<div class="input_box">
+<input type="email" placeholder="Enter Your Email"
+required>
+<i class="fa-solid fa-envelope email"></i>
+</div>
+<div class="input_box">
+    <input type="password" placeholder="Enter Your
+    Password" required>
+    <i class="fa-solid fa-lock password"></i>
+    </div>
+    <div class="option_field">
+    <span class="checkbox">
+    <input type="checkbox" id="check">
+    <label for="check">Remember Me</label>
+    </span>
+    <a href="#" class="forget_pw">Forget Password?</a>
+    </div>
+    <button class="btn">Login Now</button>
+    <div class="login_signup">
+    Don't have an account? <a href="#" id="signup">Signup</a>
+    </div>
+    </form>
+    </div>
+    <!-- Signup form -->
+    <div class="form signup_form">
+    <form action="">
+    <h1>Signup</h1>
+    <div class="input_box">
+    <input type="email" placeholder="Enter Your Email"
+    required>
+    <i class="fa-solid fa-envelope email"></i>
+    </div>
+    <div class="input_box">
+    <input type="password" placeholder="Create
+    Password" required>
+    <i class="fa-solid fa-lock password"></i>
+    </div>
+    <div class="input_box">
+    <input type="password" placeholder="Confirm
+    Password" required>
+    <i class="fa-solid fa-lock password"></i>
+    </div>
+    <button class="btn">Signup Now</button>
+    <div class="login_signup">
+    Already have an account? <a href="#" id="login">Login</a>
+    </div>
+    </form>
+    </div>
+    </div>
+    </section>
+    <script src="script.js"></script>
+    </body>
+    </html>
+    
